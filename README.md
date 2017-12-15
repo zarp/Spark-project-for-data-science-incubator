@@ -1,22 +1,9 @@
 Data science incubator miniproject: using Spark to analyze StackOverflow user comments dataset
 
-# Overview
-
-StackOverflow is a collaboratively edited question-and-answer site originally
-focused on programming topics. Because of the variety of features tracked,
-including a variety of feedback metrics, it allows for some open-ended analysis
-of user behavior on the site.
-
 ## Accessing the data
 
 There are three subfolders: allUsers, allPosts, and allVotes which contain
-chunked and gzipped xml with the following format:
-
-```xml
-<row Body="&lt;p&gt;I always validate my web pages, and I recommend you do the same BUT many large company websites DO NOT and cannot validate because the importance of the website looking exactly the same on all systems requires rules to be broken. &lt;/p&gt;&#10;&#10;&lt;p&gt;In general, valid websites help your page look good even on odd configurations (like cell phones) so you should always at least try to make it validate.&lt;/p&gt;&#10;" CommentCount="0" CreationDate="2008-10-12T20:26:29.397" Id="195995" LastActivityDate="2008-10-12T20:26:29.397" OwnerDisplayName="Eric Wendelin" OwnerUserId="25066" ParentId="195973" PostTypeId="2" Score="0" />
-```
-
-Some rows are split across multiple lines; these can be discarded.  A
+chunked and gzipped xml. Some rows are split across multiple lines; these can be discarded.  A
 full schema can be found
 [here](https://ia801500.us.archive.org/8/items/stackexchange/readme.txt),
 which originates from [this](https://archive.org/details/stackexchange).
